@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{%load static %}
+{%block title%} Blog Detayları {%endblock%}
+{% block content%}
+  
+    <div class="container mt-3"> <!-- Mt= Margin-top -->
+        <div class="row">
+          
+            <div class="col-12">
+                <div class="card">
+                
+                  <!--   <img src="{%static 'img/'|add:blog.image%}" alt="" class="img-fluid rounded-start card-img-top"> <!-- Django filters -->
+                    
+                    <div class="card-body">
+                      <h1 class="card-title h3 mb-3">{{blog.title|title}}</h1>
+                      <img src="{{blog.image.url}}" alt="" class="img-fluid rounded-start " style="float:left;margin-right:20px;margin-bottom:20px;">
+                      <p class="card-text">{{blog.descriptions|safe}}</p>
+                      
+                    </div>
+                  </div>
+
+                <h1></h1>
+                <p>
+                    
+                </p>
+               
+
+            </div>
+        </div>
+    </div>
+{%endblock%}
