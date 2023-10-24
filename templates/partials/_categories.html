@@ -2,9 +2,9 @@
 
     {% for category in categories %}
         {%if category.slug == selected_category %}
-            <a href="{%url 'blogs_by_category' category.slug%}" class="list-group-item list-group-item-action active">{{ category.name|title }}</a>      
+            <a href="{%url 'blogs_by_category' category.slug%}" class="list-group-item list-group-item-action active"><img src="{{category.category_img.url}}" alt="" class="img-fluid " style="width:15%;float:left;margin:2px;">&nbsp;&nbsp; {{ category.name|title }}</a>      
         {% else %}
-            <a href="{%url 'blogs_by_category' category.slug%}" class="list-group-item list-group-item-action">{{ category.name|title }}</a>      
+            <a href="{%url 'blogs_by_category' category.slug%}" class="list-group-item list-group-item-action"><img src="{{category.category_img.url}}" alt="" class="img-fluid  " style="width:15%;float:left;margin:2px;">&nbsp;&nbsp;{{ category.name|title }}</a>      
         {%endif%}
 
     {% endfor %}

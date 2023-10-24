@@ -5,6 +5,7 @@ from ckeditor.fields import RichTextField
 
 class Category(models.Model):
     name=models.CharField(max_length=150)
+    category_img=models.ImageField(null=True,upload_to='category')
     slug=models.SlugField(null=False,blank=True,unique=True,db_index=True,editable=False) # db_index alanı hız , performans açısından önemli
 
     def __str__(self):
